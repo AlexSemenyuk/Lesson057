@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task01</title>
+    <link rel="stylesheet" href="./css/styles-task01.css" />
+</head>
+
+<body>
+    <div>
+        <h2>credit card details</h2>
+        <form>
+            <div class="card number">
+                <label for="card-number">Card Number</label>
+                <input name="cardNumber" id="card-number" type="text" required pattern="(\d{4}){1}( (\d{4})){3}"
+                    placeholder="1234 5678 9012 3456">
+            </div>
+            <div class="card name">
+                <label for="card-name">Name On Card</label>
+                <input name="cardName" id="card-name" type="text" required pattern="([A-Za-z]+){1}( [A-Za-z]+){1}"
+                    placeholder="Name Surname">
+            </div>
+            <div class="label-date">
+                <label for="expiry-date">Expiry Date</label>
+                <label for="cvv-cvn">CVV / CVN</label>
+            </div>
+            <div class="input-date">
+                <input name="month" id="month" type="number" required min="01" max="12" placeholder="02">
+                <input name="year" id="year" type="number" required min="2015" max="2028" placeholder="2017">
+                <input name="cvvCvn" id="cvv-cvn" type="password" required pattern="([\d]{3}){1}" placeholder="***">
+            </div>
+
+        </form>
+        <input class="check" type="submit">
+    </div>
+
+
+
+</body>
+
+</html>

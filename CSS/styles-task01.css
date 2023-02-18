@@ -1,0 +1,191 @@
+/* Common */
+:root {
+  /* text color */
+  --color-text-primary: rgba(0, 0, 0, 1);
+  --color-text-secondary: rgb(255, 255, 255);
+  --color-text-label: rgb(59, 100, 102);
+  --color-text-input: rgb(124, 159, 161);
+
+  /* background */
+  --color-background-body: rgb(210, 210, 210, 1);
+  --color-background-form: rgb(159, 205, 205, 1);
+  --color-background-h: rgb(219, 100, 32, 1);
+  --color-background-input: rgb(169, 211, 210, 1);
+  --color-background-input-active: rgb(50, 109, 109);
+  /* text */
+  --text-primary: "Arial", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-text-secondary);
+}
+
+body {
+  background-color: var(--color-background-main-primary);
+  width: 830px;
+  height: 540px;
+  border: 1px solid var(--color-text-primary);
+  font-family: var(--text-primary);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--color-text-primary);
+}
+
+h2 {
+  width: 490px;
+  height: 55px;
+  background-color: var(--color-background-h);
+  top: 70px;
+  left: 45px;
+  position: absolute;
+  z-index: 1;
+  line-height: 55px;
+  padding-left: 60px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+div {
+  position: relative;
+}
+
+form {
+  width: 700px;
+  height: 485px;
+  display: block;
+  border: 1px solid var(--color-background-form);
+  border-radius: 15px;
+  /* display: flex;
+  align-items: center; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-48%, 5%);
+  /* transform: translate(-50%, -50%); */
+  /* background: url("/icons/moon_flag.png") no-repeat 340px 80px; */
+  background-image: url("/icons/moon_flag.png");
+  background-size: 380px;
+  background-repeat: no-repeat;
+  background-position: 435px 185px;
+  background-color: var(--color-background-form);
+}
+
+label[for="card-number"],
+label[for="card-name"] {
+  display: inline-block;
+  width: 380px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: 400;
+  color: var(--color-text-label);
+  background-color: var(--color-background-form);
+  border: none;
+}
+
+input[name="cardNumber"],
+input[name="cardName"] {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-input);
+  border: none;
+  border-bottom: 1px solid var(--color-text-primary);
+  text-indent: 1em;
+  width: 380px;
+  height: 50px;
+  background-color: var(--color-background-input);
+}
+
+input::placeholder {
+  color: var(--color-text-input);
+  text-indent: 1em;
+}
+
+.card {
+  z-index: 2;
+  background-color: var(--color-background-form);
+  display: inline;
+}
+
+.number {
+  position: relative;
+  top: 115px;
+  left: 60px;
+}
+
+.name {
+  position: relative;
+  top: 130px;
+  left: 60px;
+}
+
+label[for="expiry-date"],
+label[for="cvv-cvn"] {
+  display: inline-block;
+  width: 110px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: 400;
+  color: var(--color-text-label);
+  background-color: var(--color-background-form);
+  border: none;
+}
+
+label[for="expiry-date"] {
+  margin-right: 157px;
+}
+
+input[name="month"],
+input[name="year"],
+input[name="cvvCvn"] {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-input);
+  border: none;
+  border-bottom: 1px solid var(--color-text-primary);
+  text-indent: 1em;
+  width: 110px;
+  height: 50px;
+  background-color: var(--color-background-input);
+}
+
+input[name="month"],
+input[name="year"] {
+  margin-right: 21px;
+}
+
+.label-date {
+  z-index: 0;
+  background-color: var(--color-background-form);
+  width: 400px;
+  /* display: inline; */
+  position: relative;
+  top: 150px;
+  left: 60px;
+}
+.input-date {
+  z-index: 2;
+  background-color: var(--color-background-form);
+  display: inline;
+  position: relative;
+  top: 150px;
+  left: 60px;
+}
+
+input:active,
+input:focus,
+input:hover {
+  background-color: var(--color-text-secondary);
+  outline: none;
+}
+
+.check {
+  position: relative;
+  top: 550px;
+  left: 50px;
+}
