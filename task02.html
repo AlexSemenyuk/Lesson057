@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task01</title>
+    <link rel="stylesheet" href="/CSS/styles-task02.css" />
+</head>
+
+<body>
+    <div>
+        <form>
+
+            <div class="input-text">
+                <h2>Inputs</h2>
+                <input name="someText" id="some-text" type="text" placeholder="Enter some text">
+                <input name="validText" id="valid-text" type="text" pattern="(\d)*" placeholder="valid text">
+                <input name="invalidText" id="invalid-text" type="text" pattern="(\d)*" placeholder="invalid text">
+            </div>
+            <div class="check-boxes">
+                <h2>Check boxes</h2>
+                <label class="label1">
+                    <input class="checkbox1" type="checkbox" name="checkbox1">
+                    <span class="fake1"></span>
+                    <span class="fake2"></span>
+                    <span class="text1">Subscribe</span>
+                </label>
+            </div>
+            <div class="check-boxes">
+                <!-- <h2>Check boxes</h2> -->
+                <label class="label1">
+                    <input class="checkbox1" type="checkbox" name="checkbox1">
+                    <span class="fake1"></span>
+                    <span class="fake2"></span>
+                    <span class="text1">Subscribe</span>
+                </label>
+            </div>
+            <div class="radio-buttons">
+                <h2>Radio buttons</h2>
+                <label id="radio" for="radio">Gender:</label>
+                <label class="label">
+                    <input class="checkbox" type="radio" name="gender" value="male">
+                    <span class="fake"></span>
+                    <span class="text">Male</span>
+                </label>
+                <label class="label">
+                    <input class="checkbox" type="radio" name="gender" value="female">
+                    <span class="fake"></span>
+                    <span class="text">Female</span>
+                </label>
+
+            </div>
+            <div class="buttons">
+                <h2>Buttons</h2>
+                <input class="but active" type="button" value="Active">
+                <input class="but a-hover" type="button" value="Hover">
+                <input class="but danger" type="button" value="Danger">
+                <input class="but d-hover" type="button" value="Hover">
+                <input class="but disabled" type="button" value="Disabled">
+                <input class="circle plus" type="button" value="+">
+                <input class="circle minus" type="button" value="-">
+            </div>
+
+            <div class="text-area">
+                <h2>Text area</h2>
+                <textarea class="t-area" name="textArea" cols="30" rows="7"
+                    value="Enter some text">Enter some text</textarea>
+
+            </div>
+        </form>
+    </div>
+
+    <!-- <input class="check" type="submit"> -->
+
+</body>
+
+</html>

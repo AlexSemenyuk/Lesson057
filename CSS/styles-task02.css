@@ -1,0 +1,349 @@
+/* Common */
+:root {
+  /* text color */
+  --color-text-primary: rgba(0, 0, 0, 1);
+  --color-text-secondary: rgb(255, 255, 255);
+  --color-text-some: rgb(205, 205, 205, 1);
+  --color-text-valid: rgb(135, 153, 137, 1);
+  --color-text-invalid: rgb(196, 123, 143, 1);
+
+  /* background */
+  --color-background-body: rgb(245, 245, 245, 1);
+  --color-background-active: rgb(65, 175, 75, 1);
+  --color-background-danger: rgb(230, 65, 100, 1);
+  --color-background-a-hover: rgb(48, 118, 48, 1);
+  --color-background-d-hover: rgb(153, 39, 62, 1);
+  --color-background-disabled: rgb(128, 128, 128, 1);
+
+  /* text */
+  --text-primary: "Arial", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background-body);
+  font-family: var(--text-primary);
+}
+
+body {
+  background-color: var(--color-background-body);
+  width: 880px;
+  height: 750px;
+  border: 1px solid var(--color-text-primary);
+}
+
+h2 {
+  /* font-family: var(--text-primary); */
+  padding-left: 35px;
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--text-primary);
+  margin: 40px 0 20px 0;
+}
+
+input[name="someText"],
+input[name="validText"],
+input[name="invalidText"] {
+  width: 240px;
+  height: 50px;
+  font-size: 14px;
+  text-indent: 1.5em;
+}
+
+input[name="someText"] {
+  background-color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-some);
+  border-radius: 5px;
+  margin-left: 35px;
+  margin-right: 5px;
+}
+
+input[name="someText"]::placeholder {
+  color: var(--color-text-some);
+}
+
+input[name="someText"]:active,
+input[name="someText"]:focus {
+  outline: 2px solid var(--color-text-some);
+}
+
+input[name="validText"] {
+  background-color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-valid);
+  color: var(--color-text-valid);
+  border-radius: 5px;
+  margin-right: 5px;
+  background-image: url("/icons/valid.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 210px 15px;
+}
+
+input[name="validText"]::placeholder {
+  color: var(--color-text-valid);
+}
+
+input[name="validText"]:active,
+input[name="validText"]:focus {
+  outline: 2px solid var(--color-text-valid);
+}
+
+input[name="invalidText"] {
+  background-color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-invalid);
+  color: var(--color-text-invalid);
+  border-radius: 5px;
+  background-image: url("/icons/invalid.png");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 210px 11px;
+}
+
+input[name="invalidText"]::placeholder {
+  color: var(--color-text-invalid);
+}
+
+input[name="invalidText"]:active,
+input[name="invalidText"]:focus {
+  outline: 2px solid var(--color-text-invalid);
+}
+
+.label {
+  margin-left: 15px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.fake {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-background-active);
+  border-radius: 50%;
+  top: 2px;
+  position: relative;
+}
+
+.fake::before {
+  content: "";
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-background-active);
+  border-radius: 50%;
+  background-color: var(--color-background-active);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.checkbox:checked + .fake::before {
+  opacity: 1;
+}
+.text {
+  font-weight: 400;
+  line-height: 16px;
+}
+
+label[for="radio"] {
+  margin-left: 35px;
+}
+
+.check-boxes {
+  display: inline-block;
+}
+
+.checkbox1 {
+  display: none;
+}
+
+.label1 {
+  position: relative;
+  margin-left: 35px;
+}
+
+.fake1 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 20px;
+  border: 1px solid var(--color-background-active);
+  border-radius: 3px;
+  top: 4px;
+  left: 0px;
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fake1::before {
+  content: "";
+  box-sizing: border-box;
+  top: 50%;
+  left: 1px;
+  transform: translate(0, -50%);
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 16px;
+  border: 1px solid var(--color-background-active);
+  border-radius: 3px;
+  background-color: var(--color-background-active);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fake2 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50px;
+  height: 20px;
+  border: 1px solid var(--color-background-danger);
+  border-radius: 3px;
+  top: 4px;
+  left: -54px;
+  position: relative;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.fake2::before {
+  content: "";
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(1px, -50%);
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 16px;
+  border: 1px solid var(--color-background-danger);
+  border-radius: 3px;
+  background-color: var(--color-background-danger);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.checkbox1:checked + .fake1::before,
+.checkbox1:checked + .fake1 {
+  opacity: 1;
+}
+
+.checkbox1:checked ~ .fake2::before,
+.checkbox1:checked ~ .fake2 {
+  opacity: 0;
+}
+
+.text1 {
+  font-weight: 400;
+  line-height: 16px;
+  top: 0px;
+  left: 55px;
+  position: absolute;
+}
+
+/* .bottons {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+} */
+.but {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  display: inline-block;
+  /* width: 100px; */
+  padding: 0 25px 0 25px;
+  height: 45px;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+
+.active {
+  margin-left: 35px;
+  /* background-color: var(--color-background-active);
+  border: 1px solid var(--color-background-active); */
+  background-color: var(--color-background-disabled);
+  border: 1px solid var(--color-background-disabled);
+}
+
+.active:hover {
+  margin-left: 35px;
+  background-color: var(--color-background-a-hover);
+  border: 1px solid var(--color-background-a-hover);
+}
+
+.active:active {
+  margin-left: 35px;
+  background-color: var(--color-background-active);
+  border: 1px solid var(--color-background-active);
+}
+
+.a-hover {
+  background-color: var(--color-background-a-hover);
+  border: 1px solid var(--color-background-a-hover);
+}
+
+.danger {
+  background-color: var(--color-background-danger);
+  border: 1px solid var(--color-background-danger);
+}
+
+.d-hover {
+  background-color: var(--color-background-d-hover);
+  border: 1px solid var(--color-background-d-hover);
+}
+
+.disabled {
+  background-color: var(--color-background-disabled);
+  border: 1px solid var(--color-background-disabled);
+}
+
+.circle {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  /* font-size: 24px; */
+  display: inline-block;
+  width: 45px;
+  /* padding: 0 25px 0 25px; */
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.plus {
+  background-color: var(--color-background-active);
+  border: 1px solid var(--color-background-active);
+}
+
+.minus {
+  background-color: var(--color-background-danger);
+  border: 1px solid var(--color-background-danger);
+}
+
+.t-area {
+  margin-left: 35px;
+  width: 530px;
+  height: 130px;
+  border: 1px solid var(--color-text-some);
+  color: var(--color-text-some);
+  font-size: 14px;
+  line-height: 2em;
+  text-indent: 2em;
+}
+
+.t-area:active,
+.t-area:focus {
+  margin-left: 35px;
+  width: 530px;
+  height: 130px;
+  border: none;
+  outline: 3px solid var(--color-text-some);
+  color: var(--color-text-some);
+}
